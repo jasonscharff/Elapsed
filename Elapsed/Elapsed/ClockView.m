@@ -26,6 +26,8 @@
 -(id)init {
   self = [super init];
   _textLabel = [UILabel new];
+  [AutolayoutHelper configureView:self subViews:VarBindings(_textLabel, _clockView) constraints:@[@"H:|[_clockView]|", @"V:|[_clockView]-2-[_textLabel]", @"X:_textLabel.centerX == superview.centerX"]];
+   
   return self;
 }
 
