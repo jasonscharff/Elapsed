@@ -3,5 +3,7 @@
 
 target 'Elapsed' do
 pod 'SupportKit'
+pod 'BEMAnalogClock'
+pod 'Realm'
 end
 

@@ -1,10 +1,18 @@
 PODS:
+  - BEMAnalogClock (1.4)
+  - Realm (0.95.0):
+    - Realm/Headers (= 0.95.0)
+  - Realm/Headers (0.95.0)
   - SupportKit (2.10.2)
 
 DEPENDENCIES:
+  - BEMAnalogClock
+  - Realm
   - SupportKit
 
 SPEC CHECKSUMS:
+  BEMAnalogClock: 88786eba7763d63abd5a9956c2d1106f30c7f251
+  Realm: bbb171b96728ea136ed5cd354dca2a3d6529923c
   SupportKit: 7ec8dab8cdd2468a74901a7e88c647f504d265e4
 
 COCOAPODS: 0.39.0.beta.4

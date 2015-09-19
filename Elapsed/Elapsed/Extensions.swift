@@ -17,4 +17,12 @@ extension UIColor {
     
     self.init(red: r, green: g, blue: b, alpha: 1.0)
   }
+  
+  public class func clockInColor() -> UIColor {
+    return UIColor(red: 52, green: 152, blue: 219);
+  }
+  
+  public class func clockOutColor() -> UIColor {
+    return UIColor(red: 230, green: 126, blue: 34);
+  }
 }

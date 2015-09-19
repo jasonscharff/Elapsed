@@ -14,6 +14,10 @@
 		BE1AEB961BAD93E20024CD7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1AEB951BAD93E20024CD7F /* Assets.xcassets */; };
 		BE1AEB991BAD93E20024CD7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1AEB971BAD93E20024CD7F /* LaunchScreen.storyboard */; };
 		BE2A2D841BAD99F1007AC458 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A2D831BAD99F1007AC458 /* Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		BE2A2D891BADA0D0007AC458 /* AutolayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A2D861BADA0D0007AC458 /* AutolayoutHelper.m */; settings = {ASSET_TAGS = (); }; };
+		BE2A2D8A1BADA0D0007AC458 /* LinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A2D881BADA0D0007AC458 /* LinearLayout.m */; settings = {ASSET_TAGS = (); }; };
+		BE2A2D8E1BADA1D4007AC458 /* TimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A2D8D1BADA1D4007AC458 /* TimeCell.m */; settings = {ASSET_TAGS = (); }; };
+		BE2A2D911BADA4AB007AC458 /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A2D901BADA4AB007AC458 /* ClockView.m */; settings = {ASSET_TAGS = (); }; };
 		F019E8E9A6DF55EB74756303 /* libPods-Elapsed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BF37299B506844804441AA /* libPods-Elapsed.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,14 @@
 		BE1AEB9A1BAD93E20024CD7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE2A2D821BAD99F1007AC458 /* Elapsed-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Elapsed-Bridging-Header.h"; sourceTree = "<group>"; };
 		BE2A2D831BAD99F1007AC458 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BE2A2D851BADA0D0007AC458 /* AutolayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutHelper.h; sourceTree = "<group>"; };
+		BE2A2D861BADA0D0007AC458 /* AutolayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutHelper.m; sourceTree = "<group>"; };
+		BE2A2D871BADA0D0007AC458 /* LinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearLayout.h; sourceTree = "<group>"; };
+		BE2A2D881BADA0D0007AC458 /* LinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearLayout.m; sourceTree = "<group>"; };
+		BE2A2D8C1BADA1D4007AC458 /* TimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeCell.h; sourceTree = "<group>"; };
+		BE2A2D8D1BADA1D4007AC458 /* TimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeCell.m; sourceTree = "<group>"; };
+		BE2A2D8F1BADA4AB007AC458 /* ClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
+		BE2A2D901BADA4AB007AC458 /* ClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
 		F1269DC006AC1990FB958EBE /* Pods-Elapsed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elapsed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elapsed/Pods-Elapsed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +70,7 @@
 		BE1AEB7D1BAD93E20024CD7F = {
 			isa = PBXGroup;
 			children = (
+				BE2A2D8B1BADA0D8007AC458 /* AutoLayout Convience */,
 				BE1AEB881BAD93E20024CD7F /* Elapsed */,
 				BE1AEB871BAD93E20024CD7F /* Products */,
 				D9F536E394A706FCDE37C235 /* Pods */,
@@ -81,6 +94,10 @@
 				BE1AEB8D1BAD93E20024CD7F /* AppDelegate.m */,
 				BE1AEB8F1BAD93E20024CD7F /* ViewController.h */,
 				BE1AEB901BAD93E20024CD7F /* ViewController.m */,
+				BE2A2D8C1BADA1D4007AC458 /* TimeCell.h */,
+				BE2A2D8D1BADA1D4007AC458 /* TimeCell.m */,
+				BE2A2D8F1BADA4AB007AC458 /* ClockView.h */,
+				BE2A2D901BADA4AB007AC458 /* ClockView.m */,
 				BE1AEB921BAD93E20024CD7F /* Main.storyboard */,
 				BE1AEB951BAD93E20024CD7F /* Assets.xcassets */,
 				BE1AEB971BAD93E20024CD7F /* LaunchScreen.storyboard */,
@@ -97,6 +114,17 @@
 				BE1AEB8A1BAD93E20024CD7F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE2A2D8B1BADA0D8007AC458 /* AutoLayout Convience */ = {
+			isa = PBXGroup;
+			children = (
+				BE2A2D851BADA0D0007AC458 /* AutolayoutHelper.h */,
+				BE2A2D861BADA0D0007AC458 /* AutolayoutHelper.m */,
+				BE2A2D871BADA0D0007AC458 /* LinearLayout.h */,
+				BE2A2D881BADA0D0007AC458 /* LinearLayout.m */,
+			);
+			name = "AutoLayout Convience";
 			sourceTree = "<group>";
 		};
 		D9F536E394A706FCDE37C235 /* Pods */ = {
@@ -231,7 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE1AEB911BAD93E20024CD7F /* ViewController.m in Sources */,
+				BE2A2D8E1BADA1D4007AC458 /* TimeCell.m in Sources */,
+				BE2A2D891BADA0D0007AC458 /* AutolayoutHelper.m in Sources */,
+				BE2A2D8A1BADA0D0007AC458 /* LinearLayout.m in Sources */,
 				BE1AEB8E1BAD93E20024CD7F /* AppDelegate.m in Sources */,
+				BE2A2D911BADA4AB007AC458 /* ClockView.m in Sources */,
 				BE1AEB8B1BAD93E20024CD7F /* main.m in Sources */,
 				BE2A2D841BAD99F1007AC458 /* Extensions.swift in Sources */,
 			);

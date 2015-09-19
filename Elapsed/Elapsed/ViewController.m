@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -19,6 +19,29 @@
   self.view.backgroundColor = [UIColor whiteColor];
   self.title = @"Elapsed";
   // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)configureTableView {
+  UITableView *tableView = [[UITableView alloc]init];
+  
+  tableView.delegate = self;
+  tableView.dataSource = self;
+  
+  
+  [self.view addSubview:tableView];
+  
+}
+
+
+#pragma mark table view data source + delegate
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return 0;
+}
+
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath {
+  
+  return [UITableViewCell new];
+  
 }
 
 
