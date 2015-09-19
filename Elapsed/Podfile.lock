@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - BEMAnalogClock (1.4)
+  - JBChartView (2.8.16)
   - Realm (0.95.0):
     - Realm/Headers (= 0.95.0)
   - Realm/Headers (0.95.0)
@@ -29,12 +30,14 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - BEMAnalogClock
+  - JBChartView
   - Realm
   - SupportKit
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   BEMAnalogClock: 88786eba7763d63abd5a9956c2d1106f30c7f251
+  JBChartView: 8e65b7fbb4e7f1f2c0197575734fce4af1c19e17
   Realm: bbb171b96728ea136ed5cd354dca2a3d6529923c
   SupportKit: 7ec8dab8cdd2468a74901a7e88c647f504d265e4
 

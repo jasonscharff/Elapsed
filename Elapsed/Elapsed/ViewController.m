@@ -14,7 +14,9 @@
 
 #import "AutoLayoutHelper.h"
 #import "ClockInSheet.h"
+#import "GraphViewController.h"
 #import "TimeCell.h"
+
 
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
@@ -31,7 +33,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.view.backgroundColor = [UIColor whiteColor];
-  self.title = @"Elapsed";
+  [self configureNavigationBar];
   _entries = [[ClockInSheet allObjects]sortedResultsUsingProperty:@"time" ascending:NO];
   [self configureTableView];
     
@@ -45,8 +47,21 @@
     [_locationManager startMonitoringForRegion:region2];
 }
 
+-(void)configureNavigationBar {
+  self.title = @"Elapsed";
+  [self.navigationItem setHidesBackButton:YES];
+  UIButton *graphButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 24, 24)];
+  [graphButton setBackgroundImage:[UIImage imageNamed:@"graph"] forState:UIControlStateNormal];
+  [graphButton addTarget:self action:@selector(graphPressed:) forControlEvents:UIControlEventTouchDown];
+  UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:graphButton];
+  
+  self.navigationItem.rightBarButtonItem = barButtonItem;
+}
+
+
 -(void)configureTableView {
   UITableView *tableView = [[UITableView alloc]init];
+  tableView.allowsSelection = NO;
   [tableView registerClass:[TimeCell class] forCellReuseIdentifier:@"timeCell"];
   tableView.rowHeight = UITableViewAutomaticDimension;
   tableView.estimatedRowHeight = 65;
@@ -54,10 +69,6 @@
   [AutolayoutHelper configureView:self.view subViews:VarBindings(tableView) constraints:@[@"H:|[tableView]|", @"V:|[tableView]|"]];
   tableView.delegate = self;
   tableView.dataSource = self;
-  
-  
-  
-  
 }
 
 #pragma mark - ibeacon manager
@@ -111,6 +122,19 @@
   
 }
 
+#pragma mark actions
+
+-(IBAction)graphPressed:(id)sender {
+  GraphViewController *vc = [[GraphViewController alloc]init];
+  UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                                               style:UIBarButtonItemStylePlain
+                                                              target:nil
+                                                              action:nil];
+  
+  [self.navigationItem setBackBarButtonItem:backItem];
+
+  [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];

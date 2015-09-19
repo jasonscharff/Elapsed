@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JBChartView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Elapsed.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>39BD72376708ED775B766256B1B4B498</key>
+		<key>36CF2DD3FB5DB26B98AB10AA6E7B39D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>535DBF56B871416F7AD5AE8B47BD9A49</key>
+		<key>787D49ED314929E77A9BEF696D28EC5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B23F9F41FC00CB180A4A2B57783E6899</key>
+		<key>A5C202B2ACAA56D724C9865E1FD2467B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED1F1CAEE30B915C8F2DA2ADBF12FBFC</key>
+		<key>B384CB686EEF897403C76CD4ACBD6CA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB6D2514367E7AE9984323BA7AD468EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

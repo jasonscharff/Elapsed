@@ -12,6 +12,7 @@
 
 #import "Elapsed-Swift.h"
 #import "ViewController.h"
+#import "LoginViewController.h"
 
 #import <Realm/Realm.h>
 #import "ClockInSheet.h"
@@ -33,7 +34,8 @@
   
   self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
   UINavigationController *navController=[[UINavigationController alloc] init];
-  ViewController *firstController=[[ViewController alloc] init];
+ // ViewController *firstController=[[ViewController alloc] init];
+  LoginViewController *firstController = [[LoginViewController alloc]init];
   [navController pushViewController:firstController animated:NO];
   _window.rootViewController = navController;
   [_window makeKeyAndVisible];

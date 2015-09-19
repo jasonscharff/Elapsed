@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '61CD93D5A7019A7A9AC76E84'
+               BlueprintIdentifier = '444801D505C49D043AD83ED9'
                BlueprintName = 'BEMAnalogClock'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libBEMAnalogClock.a'>

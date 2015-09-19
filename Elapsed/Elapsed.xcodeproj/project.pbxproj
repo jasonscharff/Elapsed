@@ -12,7 +12,6 @@
 		BE1AEB8B1BAD93E20024CD7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1AEB8A1BAD93E20024CD7F /* main.m */; };
 		BE1AEB8E1BAD93E20024CD7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1AEB8D1BAD93E20024CD7F /* AppDelegate.m */; };
 		BE1AEB911BAD93E20024CD7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1AEB901BAD93E20024CD7F /* ViewController.m */; };
-		BE1AEB941BAD93E20024CD7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1AEB921BAD93E20024CD7F /* Main.storyboard */; };
 		BE1AEB961BAD93E20024CD7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1AEB951BAD93E20024CD7F /* Assets.xcassets */; };
 		BE1AEB991BAD93E20024CD7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1AEB971BAD93E20024CD7F /* LaunchScreen.storyboard */; };
 		BE2A2D841BAD99F1007AC458 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A2D831BAD99F1007AC458 /* Extensions.swift */; settings = {ASSET_TAGS = (); }; };
@@ -22,6 +21,7 @@
 		BE2A2D911BADA4AB007AC458 /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A2D901BADA4AB007AC458 /* ClockView.m */; settings = {ASSET_TAGS = (); }; };
 		BED165451BADB2E7005DC54B /* ClockInSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BED165441BADB2E7005DC54B /* ClockInSheet.m */; settings = {ASSET_TAGS = (); }; };
 		BED165481BADF216005DC54B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED165471BADF216005DC54B /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BED1654B1BAE0846005DC54B /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1654A1BAE0846005DC54B /* GraphViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F019E8E9A6DF55EB74756303 /* libPods-Elapsed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BF37299B506844804441AA /* libPods-Elapsed.a */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,6 @@
 		BE1AEB8D1BAD93E20024CD7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BE1AEB8F1BAD93E20024CD7F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BE1AEB901BAD93E20024CD7F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BE1AEB931BAD93E20024CD7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE1AEB951BAD93E20024CD7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE1AEB981BAD93E20024CD7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE1AEB9A1BAD93E20024CD7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +53,8 @@
 		BED165441BADB2E7005DC54B /* ClockInSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClockInSheet.m; path = ../ClockInSheet.m; sourceTree = "<group>"; };
 		BED165461BADF216005DC54B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BED165471BADF216005DC54B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		BED165491BAE0846005DC54B /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		BED1654A1BAE0846005DC54B /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		F1269DC006AC1990FB958EBE /* Pods-Elapsed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elapsed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elapsed/Pods-Elapsed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,13 +111,14 @@
 				BE1AEB8D1BAD93E20024CD7F /* AppDelegate.m */,
 				BE1AEB8F1BAD93E20024CD7F /* ViewController.h */,
 				BE1AEB901BAD93E20024CD7F /* ViewController.m */,
+				BED165491BAE0846005DC54B /* GraphViewController.h */,
+				BED1654A1BAE0846005DC54B /* GraphViewController.m */,
 				BED165461BADF216005DC54B /* LoginViewController.h */,
 				BED165471BADF216005DC54B /* LoginViewController.m */,
 				BE2A2D8C1BADA1D4007AC458 /* TimeCell.h */,
 				BE2A2D8D1BADA1D4007AC458 /* TimeCell.m */,
 				BE2A2D8F1BADA4AB007AC458 /* ClockView.h */,
 				BE2A2D901BADA4AB007AC458 /* ClockView.m */,
-				BE1AEB921BAD93E20024CD7F /* Main.storyboard */,
 				BE1AEB951BAD93E20024CD7F /* Assets.xcassets */,
 				BE1AEB971BAD93E20024CD7F /* LaunchScreen.storyboard */,
 				BE1AEB9A1BAD93E20024CD7F /* Info.plist */,
@@ -217,7 +219,6 @@
 			files = (
 				BE1AEB991BAD93E20024CD7F /* LaunchScreen.storyboard in Resources */,
 				BE1AEB961BAD93E20024CD7F /* Assets.xcassets in Resources */,
-				BE1AEB941BAD93E20024CD7F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +282,7 @@
 				BE2A2D8E1BADA1D4007AC458 /* TimeCell.m in Sources */,
 				BE2A2D891BADA0D0007AC458 /* AutolayoutHelper.m in Sources */,
 				BED165481BADF216005DC54B /* LoginViewController.m in Sources */,
+				BED1654B1BAE0846005DC54B /* GraphViewController.m in Sources */,
 				BE2A2D8A1BADA0D0007AC458 /* LinearLayout.m in Sources */,
 				BE1AEB8E1BAD93E20024CD7F /* AppDelegate.m in Sources */,
 				BE2A2D911BADA4AB007AC458 /* ClockView.m in Sources */,
@@ -292,14 +294,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BE1AEB921BAD93E20024CD7F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE1AEB931BAD93E20024CD7F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BE1AEB971BAD93E20024CD7F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
