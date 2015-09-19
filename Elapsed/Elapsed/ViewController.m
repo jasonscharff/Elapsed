@@ -39,6 +39,13 @@
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
     
+    [_locationManager requestAlwaysAuthorization];
+    
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6"] major: 1 minor: 1 identifier: @"region"];
+    region.notifyEntryStateOnDisplay = YES;
+    [_locationManager startRangingBeaconsInRegion:region];
+    [_locationManager startMonitoringForRegion:region];
+    
     CLBeaconRegion *region2 = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"8F3C44B8-ADE7-4FAC-95CC-7F9BF0265301"] major: 1 minor: 1 identifier: @"region2"];
     region2.notifyEntryStateOnDisplay = YES;
     [_locationManager startRangingBeaconsInRegion:region2];
@@ -54,27 +61,49 @@
   [AutolayoutHelper configureView:self.view subViews:VarBindings(tableView) constraints:@[@"H:|[tableView]|", @"V:|[tableView]|"]];
   tableView.delegate = self;
   tableView.dataSource = self;
-  
-  
-  
+
   
 }
 
 #pragma mark - ibeacon manager
 
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
-    NSLog(@"entered the region");
+    if ([region.identifier isEqual: @"region2"]){
+        NSLog(@"Welcome! - send in request.");
+          ClockInSheet *sheet = [[ClockInSheet alloc]init];
+          sheet.time = [NSDate date];
+          sheet.isClockIn = YES;
+        
+        
+        
+          RLMRealm *realm = [RLMRealm defaultRealm];
+          [realm transactionWithBlock:^{
+            [realm addObject:sheet];
+          }];
+    }
 }
 
 -(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
-    NSLog(@"left the region");
+    if ([region.identifier isEqual: @"region2"]){
+        NSLog(@"BYE! - send out request.");
+        ClockInSheet *sheet = [[ClockInSheet alloc]init];
+        sheet.time = [NSDate date];
+        sheet.isClockIn = NO;
+        
+        
+        
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        [realm transactionWithBlock:^{
+            [realm addObject:sheet];
+        }];
+    }
 }
 
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
     
     CLBeacon *beacon = [[CLBeacon alloc] init];
     beacon = [beacons lastObject];
-    
+
     NSLog(@"RSSI: %ld \n", (long)beacon.rssi);
     
     if (beacon.proximity == CLProximityUnknown) {
