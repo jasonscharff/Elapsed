@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import <CoreLocation/CoreLocation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 #import <Realm/Realm.h>
 
 #import "AutoLayoutHelper.h"
@@ -15,9 +17,11 @@
 #import "TimeCell.h"
 
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, strong) RLMResults *entries;
+@property (nonatomic,retain) CLBeaconRegion *beaconRegion;
+@property (nonatomic,retain) CLLocationManager *locationManager;
 
 
 @end
@@ -30,6 +34,15 @@
   self.title = @"Elapsed";
   _entries = [[ClockInSheet allObjects]sortedResultsUsingProperty:@"time" ascending:NO];
   [self configureTableView];
+    
+
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    
+    CLBeaconRegion *region2 = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"8F3C44B8-ADE7-4FAC-95CC-7F9BF0265301"] major: 1 minor: 1 identifier: @"region2"];
+    region2.notifyEntryStateOnDisplay = YES;
+    [_locationManager startRangingBeaconsInRegion:region2];
+    [_locationManager startMonitoringForRegion:region2];
 }
 
 -(void)configureTableView {
@@ -45,6 +58,43 @@
   
   
   
+}
+
+#pragma mark - ibeacon manager
+
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    NSLog(@"entered the region");
+}
+
+-(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+    NSLog(@"left the region");
+}
+
+-(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
+    
+    CLBeacon *beacon = [[CLBeacon alloc] init];
+    beacon = [beacons lastObject];
+    
+    NSLog(@"RSSI: %ld \n", (long)beacon.rssi);
+    
+    if (beacon.proximity == CLProximityUnknown) {
+        
+        NSLog(@"WTF - IDK BREH");
+        
+        
+    } else if (beacon.proximity == CLProximityImmediate) {
+        
+        NSLog(@"Connected - Immediate");
+        
+    } else if (beacon.proximity == CLProximityNear) {
+        
+        NSLog(@"Connected - Near");
+        
+    } else if (beacon.proximity == CLProximityFar) {
+        NSLog(@"Connected - Far");
+        
+    }
+    
 }
 
 
