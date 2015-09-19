@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ClockInSheet;
 @interface TimeCell : UITableViewCell
+
+
+-(void)configureWithEntry : (ClockInSheet *)entry;
 
 @end

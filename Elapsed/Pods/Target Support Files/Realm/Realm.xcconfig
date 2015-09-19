@@ -1,6 +1,6 @@
 CLANG_CXX_LANGUAGE_STANDARD = compiler-default
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/Realm" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BEMAnalogClock" "${PODS_ROOT}/Headers/Public/Realm" "${PODS_ROOT}/Headers/Public/SupportKit"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/Realm" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/BEMAnalogClock" "${PODS_ROOT}/Headers/Public/Realm" "${PODS_ROOT}/Headers/Public/SupportKit"
 LIBRARY_SEARCH_PATHS = $(inherited) "$(PODS_ROOT)/Realm/core"
 OTHER_CPLUSPLUSFLAGS = -std=c++1y $(inherited) -std=c++1y $(inherited)
 OTHER_LDFLAGS = -l"c++" -l"realm-ios"

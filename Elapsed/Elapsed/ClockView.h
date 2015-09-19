@@ -10,4 +10,6 @@
 
 @interface ClockView : UIView
 
+-(void)setTime : (NSDate *)time isClockIn: (BOOL)isClockIn;
+
 @end

@@ -13,6 +13,9 @@
 #import "Elapsed-Swift.h"
 #import "ViewController.h"
 
+#import <Realm/Realm.h>
+#import "ClockInSheet.h"
+
 
 @interface AppDelegate ()
 
@@ -43,6 +46,19 @@
    [NSDictionary dictionaryWithObjectsAndKeys:
     textColor, NSForegroundColorAttributeName,
     [UIFont fontWithName:@"HelveticaNeue-Thin" size:24.0], NSFontAttributeName,nil]];
+  
+  
+  
+//  ClockInSheet *sheet = [[ClockInSheet alloc]init];
+//  sheet.time = [NSDate date];
+//  sheet.isClockIn = YES;
+//  
+//  
+//  
+//  RLMRealm *realm = [RLMRealm defaultRealm];
+//  [realm transactionWithBlock:^{
+//    [realm addObject:sheet];
+//  }];
   
   // Override point for customization after application launch.
   return YES;

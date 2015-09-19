@@ -8,7 +8,17 @@
 
 #import "ViewController.h"
 
+#import <Realm/Realm.h>
+
+#import "AutoLayoutHelper.h"
+#import "ClockInSheet.h"
+#import "TimeCell.h"
+
+
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) RLMResults *entries;
+
 
 @end
 
@@ -18,29 +28,36 @@
   [super viewDidLoad];
   self.view.backgroundColor = [UIColor whiteColor];
   self.title = @"Elapsed";
-  // Do any additional setup after loading the view, typically from a nib.
+  _entries = [[ClockInSheet allObjects]sortedResultsUsingProperty:@"time" ascending:NO];
+  [self configureTableView];
 }
 
 -(void)configureTableView {
   UITableView *tableView = [[UITableView alloc]init];
-  
+  [tableView registerClass:[TimeCell class] forCellReuseIdentifier:@"timeCell"];
+  tableView.rowHeight = UITableViewAutomaticDimension;
+  tableView.estimatedRowHeight = 65;
+  tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+  [AutolayoutHelper configureView:self.view subViews:VarBindings(tableView) constraints:@[@"H:|[tableView]|", @"V:|[tableView]|"]];
   tableView.delegate = self;
   tableView.dataSource = self;
   
   
-  [self.view addSubview:tableView];
+  
   
 }
 
 
 #pragma mark table view data source + delegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return 0;
+  return [_entries count];
 }
 
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath {
   
-  return [UITableViewCell new];
+  TimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"timeCell"];
+  [cell configureWithEntry:[_entries objectAtIndex:indexPath.row]];
+   return cell;
   
 }
 

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>BEMAnalogClock.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F53839223E479E286C4604A85E05576</key>
+		<key>39BD72376708ED775B766256B1B4B498</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E9B4225A8267F9789EAD10257F08E84</key>
+		<key>535DBF56B871416F7AD5AE8B47BD9A49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6DFE3255BE7179C1C9B57659EC4CD4E</key>
+		<key>B23F9F41FC00CB180A4A2B57783E6899</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ED1F1CAEE30B915C8F2DA2ADBF12FBFC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
