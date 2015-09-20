@@ -19,6 +19,8 @@
 		BE2A2D8A1BADA0D0007AC458 /* LinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A2D881BADA0D0007AC458 /* LinearLayout.m */; settings = {ASSET_TAGS = (); }; };
 		BE2A2D8E1BADA1D4007AC458 /* TimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A2D8D1BADA1D4007AC458 /* TimeCell.m */; settings = {ASSET_TAGS = (); }; };
 		BE2A2D911BADA4AB007AC458 /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A2D901BADA4AB007AC458 /* ClockView.m */; settings = {ASSET_TAGS = (); }; };
+		BEC0032A1BAE55960075EC6F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC003291BAE55340075EC6F /* Charts.framework */; };
+		BEC0032B1BAE55960075EC6F /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEC003291BAE55340075EC6F /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BED165451BADB2E7005DC54B /* ClockInSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BED165441BADB2E7005DC54B /* ClockInSheet.m */; settings = {ASSET_TAGS = (); }; };
 		BED165481BADF216005DC54B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED165471BADF216005DC54B /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BED1654B1BAE0846005DC54B /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1654A1BAE0846005DC54B /* GraphViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -27,11 +29,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BEC0031C1BAE544E0075EC6F /* PBXContainerItemProxy */ = {
+		BEC003281BAE55340075EC6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BEC003181BAE544E0075EC6F /* Charts.xcodeproj */;
+			containerPortal = BEC003241BAE55340075EC6F /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
+		BEC0032C1BAE55960075EC6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEC003241BAE55340075EC6F /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
 			remoteInfo = Charts;
 		};
 /* End PBXContainerItemProxy section */
@@ -43,6 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BEC0032B1BAE55960075EC6F /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,7 +83,7 @@
 		BE2A2D8D1BADA1D4007AC458 /* TimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeCell.m; sourceTree = "<group>"; };
 		BE2A2D8F1BADA4AB007AC458 /* ClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
 		BE2A2D901BADA4AB007AC458 /* ClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
-		BEC003181BAE544E0075EC6F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/ios-charts-master 4/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
+		BEC003241BAE55340075EC6F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 		BED165431BADB2E7005DC54B /* ClockInSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClockInSheet.h; path = ../ClockInSheet.h; sourceTree = "<group>"; };
 		BED165441BADB2E7005DC54B /* ClockInSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClockInSheet.m; path = ../ClockInSheet.m; sourceTree = "<group>"; };
 		BED165461BADF216005DC54B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -91,6 +101,7 @@
 			files = (
 				BED1654D1BAE2539005DC54B /* libios-charts.a in Frameworks */,
 				86B525C11BADF2EB00CA52B5 /* CoreBluetooth.framework in Frameworks */,
+				BEC0032A1BAE55960075EC6F /* Charts.framework in Frameworks */,
 				86B525BF1BADF2E600CA52B5 /* CoreLocation.framework in Frameworks */,
 				F019E8E9A6DF55EB74756303 /* libPods-Elapsed.a in Frameworks */,
 			);
@@ -113,7 +124,7 @@
 		BE1AEB7D1BAD93E20024CD7F = {
 			isa = PBXGroup;
 			children = (
-				BEC003181BAE544E0075EC6F /* Charts.xcodeproj */,
+				BEC003241BAE55340075EC6F /* Charts.xcodeproj */,
 				BE2A2D8B1BADA0D8007AC458 /* AutoLayout Convience */,
 				BE1AEB881BAD93E20024CD7F /* Elapsed */,
 				BE1AEB871BAD93E20024CD7F /* Products */,
@@ -176,10 +187,10 @@
 			name = "AutoLayout Convience";
 			sourceTree = "<group>";
 		};
-		BEC003191BAE544E0075EC6F /* Products */ = {
+		BEC003251BAE55340075EC6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEC0031D1BAE544E0075EC6F /* Charts.framework */,
+				BEC003291BAE55340075EC6F /* Charts.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +222,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BEC0032D1BAE55960075EC6F /* PBXTargetDependency */,
 			);
 			name = Elapsed;
 			productName = Elapsed;
@@ -250,8 +262,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BEC003191BAE544E0075EC6F /* Products */;
-					ProjectRef = BEC003181BAE544E0075EC6F /* Charts.xcodeproj */;
+					ProductGroup = BEC003251BAE55340075EC6F /* Products */;
+					ProjectRef = BEC003241BAE55340075EC6F /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -262,11 +274,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BEC0031D1BAE544E0075EC6F /* Charts.framework */ = {
+		BEC003291BAE55340075EC6F /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = BEC0031C1BAE544E0075EC6F /* PBXContainerItemProxy */;
+			remoteRef = BEC003281BAE55340075EC6F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -351,6 +363,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEC0032D1BAE55960075EC6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = BEC0032C1BAE55960075EC6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BE1AEB971BAD93E20024CD7F /* LaunchScreen.storyboard */ = {

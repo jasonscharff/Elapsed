@@ -12,6 +12,7 @@
 #import "Elapsed-Swift.h"
 
 #import <Realm/Realm.h>
+#import <SupportKit/SupportKit.h>
 
 #import "ClockInSheet.h"
 
@@ -54,13 +55,27 @@
   barChartView.xAxis.labelPosition = XAxisLabelPositionBottom;
   barChartView.xAxis.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
   
-  [AutolayoutHelper configureView:self.view subViews:VarBindings(barChartView) constraints:@[@"H:|-8-[barChartView]-8-|", @"X:barChartView.height == barChartView.width", @"V:|-80-[barChartView]"]];
+  
+  UIButton *helpButton = [UIButton new];
+  [helpButton setTitle:@"Does this seem incorrect to you?\n Let us know." forState:UIControlStateNormal];
+  helpButton.titleLabel.numberOfLines = 2;
+  helpButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+  helpButton.layer.borderColor = ([UIColor shadeOfGray]).CGColor;
+  helpButton.layer.cornerRadius = 6;
+  helpButton.layer.borderWidth = 2;
+  helpButton.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+  helpButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20];
+  [helpButton setTitleColor:[UIColor clockInColor] forState:UIControlStateNormal];
+  [helpButton addTarget:self action:@selector(showSupportKit:) forControlEvents:UIControlEventTouchDown];
+  
+  
+  [AutolayoutHelper configureView:self.view subViews:VarBindings(barChartView, helpButton) constraints:@[@"H:|-8-[barChartView]-8-|", @"X:barChartView.height == barChartView.width", @"V:|-80-[barChartView]-12-[helpButton]", @"X:helpButton.centerX == superview.centerX"]];
   [self.view layoutIfNeeded];
   BarChartDataSet *chartDataSet = [[BarChartDataSet alloc]initWithYVals:_hoursPerDay label:@"Number of Hours Worked"];
   
   BarChartData *chartData = [[BarChartData alloc]initWithXVals:_chartLabels dataSets:@[chartDataSet]];
   
-  [chartData setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14.f]];
+  [chartData setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:0.f]];
   barChartView.data = chartData;
   
 }
@@ -72,7 +87,8 @@
   int day = -1;
   CGFloat sum = 0;
   if([entries count] >= 2) {
-    for (int i=0; i < [entries count]; i+=2) {
+    int max = (int)[entries count] - 1;
+    for (int i= max; i > 0; i--) {
       ClockInSheet *entry = [entries objectAtIndex:i];
       NSDateComponents *component = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth fromDate:entry.time];
       if(component.day != day) {
@@ -90,7 +106,6 @@
         day = (int)component.day;
       }
       else {
-        
         if(i+1 == [entries count]) {
           [hoursPerDay addObject:@(sum)];
            NSString *label = [NSString stringWithFormat:@"%@. %li", [self getAbbreviationFromNumber:component.month], (long)component.day];
@@ -99,8 +114,8 @@
         else {
          
           NSDate *dateOne = ((ClockInSheet *)([entries objectAtIndex:i])).time;
-          NSDate *dateTwo = ((ClockInSheet *)([entries objectAtIndex:i+1])).time;
-          NSTimeInterval timeInterval = [dateOne timeIntervalSinceDate:dateTwo];
+          NSDate *dateTwo = ((ClockInSheet *)([entries objectAtIndex:i - 1])).time;
+          NSTimeInterval timeInterval = [dateTwo timeIntervalSinceDate:dateOne];
           CGFloat hours = timeInterval/3600;
           sum += hours;
           if(i == [entries count]-1) {
@@ -118,7 +133,6 @@
   [xLabels removeObjectAtIndex:0];
   
   NSMutableArray *hoursPerDayAsEntries = [[NSMutableArray alloc]init];
-  
   for (int i = 0; i < [hoursPerDay count]; i++) {
     NSNumber *hour = hoursPerDay[i];
     BarChartDataEntry *dataEntry = [[BarChartDataEntry alloc]initWithValue:[hour doubleValue] xIndex:i];
@@ -141,8 +155,8 @@
     // Dispose of any resources that can be recreated.
 }
                            
--(NSString *)getAbbreviationFromNumber : (int)monthNumber {
-  NSString * dateString = [NSString stringWithFormat: @"%d", monthNumber];
+-(NSString *)getAbbreviationFromNumber : (long)monthNumber {
+  NSString * dateString = [NSString stringWithFormat: @"%ld", monthNumber];
   
   NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
   [dateFormatter setDateFormat:@"MM"];
@@ -154,6 +168,8 @@
   return stringFromDate;
 }
 
-
+-(IBAction)showSupportKit:(id)sender {
+  [SupportKit show];
+}
 
 @end

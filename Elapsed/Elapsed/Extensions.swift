@@ -25,4 +25,8 @@ extension UIColor {
   public class func clockOutColor() -> UIColor {
     return UIColor(red: 230, green: 126, blue: 34);
   }
+  
+  public class func shadeOfGray() -> UIColor {
+       return UIColor(red: 74, green: 74, blue: 74);
+  }
 }

@@ -69,7 +69,8 @@
 -(void)configureTableView {
   UITableView *tableView = [[UITableView alloc]init];
   tableView.allowsSelection = NO;
-  [tableView registerClass:[TimeCell class] forCellReuseIdentifier:@"timeCell"];
+  [tableView registerClass:[TimeCell class] forCellReuseIdentifier:@"timeCellIn"];
+  [tableView registerClass:[TimeCell class] forCellReuseIdentifier:@"timeCellOut"];
   tableView.rowHeight = UITableViewAutomaticDimension;
   tableView.estimatedRowHeight = 65;
   tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -146,8 +147,15 @@
 }
 
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath {
+  ClockInSheet *sheet = [_entries objectAtIndex:indexPath.row];
+  TimeCell *cell;
+  if(sheet.isClockIn) {
+    cell = [tableView dequeueReusableCellWithIdentifier:@"timeCellIn"];
+  }
+  else {
+    cell = [tableView dequeueReusableCellWithIdentifier:@"timeCellOut"];
+  }
   
-  TimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"timeCell"];
   [cell configureWithEntry:[_entries objectAtIndex:indexPath.row]];
    return cell;
   
