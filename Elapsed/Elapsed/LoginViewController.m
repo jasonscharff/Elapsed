@@ -65,7 +65,7 @@
     [_passwordField becomeFirstResponder];
   }
   else {
-    [SKTUser currentUser].email = self.usernameField.text;
+    [SKTUser currentUser].firstName = self.usernameField.text;
     ViewController *vc = [[ViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
     //Send information to server, display error if wrong

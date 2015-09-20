@@ -12,6 +12,7 @@
 #import "Elapsed-Swift.h"
 
 #import <Realm/Realm.h>
+#import <SupportKit/SupportKit.h>
 
 #import "ClockInSheet.h"
 
@@ -33,12 +34,11 @@
   self.view.backgroundColor = [UIColor whiteColor];
   [self configureNavigationBar];
   [self performCalculationsOnTime];
-  [self configureBarChart];
+  [self configureUserInterfaceItems];
     // Do any additional setup after loading the view.
 }
 
--(void)configureBarChart {
-  
+-(void)configureUserInterfaceItems {
   
   BarChartView *barChartView = [[BarChartView alloc]init];
   
@@ -54,7 +54,24 @@
   barChartView.xAxis.labelPosition = XAxisLabelPositionBottom;
   barChartView.xAxis.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
   
-  [AutolayoutHelper configureView:self.view subViews:VarBindings(barChartView) constraints:@[@"H:|-8-[barChartView]-8-|", @"X:barChartView.height == barChartView.width", @"V:|-80-[barChartView]"]];
+  
+  
+  UIButton *helpButton = [UIButton new];
+  [helpButton setTitle:@"Does this seem incorrect to you?\n Let us know." forState:UIControlStateNormal];
+  helpButton.titleLabel.numberOfLines = 2;
+  helpButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+  helpButton.layer.borderColor = [UIColor shadeOfGray].CGColor;
+  helpButton.layer.cornerRadius = 6;
+  helpButton.layer.borderWidth = 2;
+  helpButton.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+  helpButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20];
+  [helpButton setTitleColor:[UIColor clockInColor] forState:UIControlStateNormal];
+  [helpButton addTarget:self action:@selector(showSupportKit:) forControlEvents:UIControlEventTouchDown];
+  
+  
+  [AutolayoutHelper configureView:self.view subViews:VarBindings(barChartView, helpButton) constraints:@[@"H:|-8-[barChartView]-8-|", @"X:barChartView.height == barChartView.width", @"V:|-80-[barChartView]-12-[helpButton]", @"X:helpButton.centerX == superview.centerX"]];
+  
+  
   [self.view layoutIfNeeded];
   BarChartDataSet *chartDataSet = [[BarChartDataSet alloc]initWithYVals:_hoursPerDay label:@"Number of Hours Worked"];
   
@@ -62,7 +79,6 @@
   
   [chartData setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14.f]];
   barChartView.data = chartData;
-  
 }
 
 -(void)performCalculationsOnTime {
@@ -154,6 +170,9 @@
   return stringFromDate;
 }
 
+-(IBAction)showSupportKit:(id)sender {
+  [SupportKit show];
+}
 
 
 @end
