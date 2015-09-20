@@ -23,24 +23,15 @@
 		BED165481BADF216005DC54B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED165471BADF216005DC54B /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BED1654B1BAE0846005DC54B /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1654A1BAE0846005DC54B /* GraphViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BED1654D1BAE2539005DC54B /* libios-charts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BED1654C1BAE2539005DC54B /* libios-charts.a */; };
-		BED1655A1BAE2696005DC54B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED165591BAE267F005DC54B /* Charts.framework */; };
-		BED1655B1BAE2696005DC54B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BED165591BAE267F005DC54B /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F019E8E9A6DF55EB74756303 /* libPods-Elapsed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BF37299B506844804441AA /* libPods-Elapsed.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BED165581BAE267F005DC54B /* PBXContainerItemProxy */ = {
+		BED165691BAE4BF8005DC54B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BED165541BAE267F005DC54B /* Charts.xcodeproj */;
+			containerPortal = BED165651BAE4BF8005DC54B /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
-			remoteInfo = Charts;
-		};
-		BED1655C1BAE2696005DC54B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BED165541BAE267F005DC54B /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
 			remoteInfo = Charts;
 		};
 /* End PBXContainerItemProxy section */
@@ -52,7 +43,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BED1655B1BAE2696005DC54B /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +80,7 @@
 		BED165491BAE0846005DC54B /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		BED1654A1BAE0846005DC54B /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		BED1654C1BAE2539005DC54B /* libios-charts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libios-charts.a"; path = "Pods/../build/Debug-iphoneos/libios-charts.a"; sourceTree = "<group>"; };
-		BED165541BAE267F005DC54B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/ios-charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
+		BED165651BAE4BF8005DC54B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/ios-charts-master 3/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		F1269DC006AC1990FB958EBE /* Pods-Elapsed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elapsed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elapsed/Pods-Elapsed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +91,6 @@
 			files = (
 				BED1654D1BAE2539005DC54B /* libios-charts.a in Frameworks */,
 				86B525C11BADF2EB00CA52B5 /* CoreBluetooth.framework in Frameworks */,
-				BED1655A1BAE2696005DC54B /* Charts.framework in Frameworks */,
 				86B525BF1BADF2E600CA52B5 /* CoreLocation.framework in Frameworks */,
 				F019E8E9A6DF55EB74756303 /* libPods-Elapsed.a in Frameworks */,
 			);
@@ -124,7 +113,7 @@
 		BE1AEB7D1BAD93E20024CD7F = {
 			isa = PBXGroup;
 			children = (
-				BED165541BAE267F005DC54B /* Charts.xcodeproj */,
+				BED165651BAE4BF8005DC54B /* Charts.xcodeproj */,
 				BE2A2D8B1BADA0D8007AC458 /* AutoLayout Convience */,
 				BE1AEB881BAD93E20024CD7F /* Elapsed */,
 				BE1AEB871BAD93E20024CD7F /* Products */,
@@ -187,10 +176,10 @@
 			name = "AutoLayout Convience";
 			sourceTree = "<group>";
 		};
-		BED165551BAE267F005DC54B /* Products */ = {
+		BED165661BAE4BF8005DC54B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BED165591BAE267F005DC54B /* Charts.framework */,
+				BED1656A1BAE4BF8005DC54B /* Charts.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,7 +211,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				BED1655D1BAE2696005DC54B /* PBXTargetDependency */,
 			);
 			name = Elapsed;
 			productName = Elapsed;
@@ -262,8 +250,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BED165551BAE267F005DC54B /* Products */;
-					ProjectRef = BED165541BAE267F005DC54B /* Charts.xcodeproj */;
+					ProductGroup = BED165661BAE4BF8005DC54B /* Products */;
+					ProjectRef = BED165651BAE4BF8005DC54B /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -274,11 +262,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BED165591BAE267F005DC54B /* Charts.framework */ = {
+		BED1656A1BAE4BF8005DC54B /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = BED165581BAE267F005DC54B /* PBXContainerItemProxy */;
+			remoteRef = BED165691BAE4BF8005DC54B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -363,14 +351,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BED1655D1BAE2696005DC54B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Charts;
-			targetProxy = BED1655C1BAE2696005DC54B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BE1AEB971BAD93E20024CD7F /* LaunchScreen.storyboard */ = {
