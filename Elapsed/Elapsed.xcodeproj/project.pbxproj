@@ -27,9 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BED165691BAE4BF8005DC54B /* PBXContainerItemProxy */ = {
+		BEC0031C1BAE544E0075EC6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BED165651BAE4BF8005DC54B /* Charts.xcodeproj */;
+			containerPortal = BEC003181BAE544E0075EC6F /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
 			remoteInfo = Charts;
@@ -73,6 +73,7 @@
 		BE2A2D8D1BADA1D4007AC458 /* TimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeCell.m; sourceTree = "<group>"; };
 		BE2A2D8F1BADA4AB007AC458 /* ClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
 		BE2A2D901BADA4AB007AC458 /* ClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
+		BEC003181BAE544E0075EC6F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/ios-charts-master 4/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		BED165431BADB2E7005DC54B /* ClockInSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClockInSheet.h; path = ../ClockInSheet.h; sourceTree = "<group>"; };
 		BED165441BADB2E7005DC54B /* ClockInSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClockInSheet.m; path = ../ClockInSheet.m; sourceTree = "<group>"; };
 		BED165461BADF216005DC54B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		BED165491BAE0846005DC54B /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		BED1654A1BAE0846005DC54B /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		BED1654C1BAE2539005DC54B /* libios-charts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libios-charts.a"; path = "Pods/../build/Debug-iphoneos/libios-charts.a"; sourceTree = "<group>"; };
-		BED165651BAE4BF8005DC54B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/ios-charts-master 3/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		F1269DC006AC1990FB958EBE /* Pods-Elapsed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elapsed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elapsed/Pods-Elapsed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +113,7 @@
 		BE1AEB7D1BAD93E20024CD7F = {
 			isa = PBXGroup;
 			children = (
-				BED165651BAE4BF8005DC54B /* Charts.xcodeproj */,
+				BEC003181BAE544E0075EC6F /* Charts.xcodeproj */,
 				BE2A2D8B1BADA0D8007AC458 /* AutoLayout Convience */,
 				BE1AEB881BAD93E20024CD7F /* Elapsed */,
 				BE1AEB871BAD93E20024CD7F /* Products */,
@@ -176,10 +176,10 @@
 			name = "AutoLayout Convience";
 			sourceTree = "<group>";
 		};
-		BED165661BAE4BF8005DC54B /* Products */ = {
+		BEC003191BAE544E0075EC6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BED1656A1BAE4BF8005DC54B /* Charts.framework */,
+				BEC0031D1BAE544E0075EC6F /* Charts.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,8 +250,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BED165661BAE4BF8005DC54B /* Products */;
-					ProjectRef = BED165651BAE4BF8005DC54B /* Charts.xcodeproj */;
+					ProductGroup = BEC003191BAE544E0075EC6F /* Products */;
+					ProjectRef = BEC003181BAE544E0075EC6F /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -262,11 +262,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BED1656A1BAE4BF8005DC54B /* Charts.framework */ = {
+		BEC0031D1BAE544E0075EC6F /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = BED165691BAE4BF8005DC54B /* PBXContainerItemProxy */;
+			remoteRef = BEC0031C1BAE544E0075EC6F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
