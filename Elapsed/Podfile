@@ -6,6 +6,5 @@ pod 'SupportKit'
 pod 'BEMAnalogClock'
 pod 'Realm'
 pod 'AFNetworking'
-pod 'JBChartView'
 end
 

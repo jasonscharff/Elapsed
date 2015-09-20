@@ -22,8 +22,42 @@
 		BED165451BADB2E7005DC54B /* ClockInSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BED165441BADB2E7005DC54B /* ClockInSheet.m */; settings = {ASSET_TAGS = (); }; };
 		BED165481BADF216005DC54B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED165471BADF216005DC54B /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BED1654B1BAE0846005DC54B /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1654A1BAE0846005DC54B /* GraphViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BED1654D1BAE2539005DC54B /* libios-charts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BED1654C1BAE2539005DC54B /* libios-charts.a */; };
+		BED1655A1BAE2696005DC54B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED165591BAE267F005DC54B /* Charts.framework */; };
+		BED1655B1BAE2696005DC54B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BED165591BAE267F005DC54B /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F019E8E9A6DF55EB74756303 /* libPods-Elapsed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BF37299B506844804441AA /* libPods-Elapsed.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BED165581BAE267F005DC54B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BED165541BAE267F005DC54B /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
+		BED1655C1BAE2696005DC54B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BED165541BAE267F005DC54B /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BED1655E1BAE2696005DC54B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BED1655B1BAE2696005DC54B /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5324B2732CCEA79ABB97FF5D /* Pods-Elapsed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elapsed.release.xcconfig"; path = "Pods/Target Support Files/Pods-Elapsed/Pods-Elapsed.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +89,8 @@
 		BED165471BADF216005DC54B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BED165491BAE0846005DC54B /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		BED1654A1BAE0846005DC54B /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		BED1654C1BAE2539005DC54B /* libios-charts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libios-charts.a"; path = "Pods/../build/Debug-iphoneos/libios-charts.a"; sourceTree = "<group>"; };
+		BED165541BAE267F005DC54B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/ios-charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		F1269DC006AC1990FB958EBE /* Pods-Elapsed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elapsed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elapsed/Pods-Elapsed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED1654D1BAE2539005DC54B /* libios-charts.a in Frameworks */,
 				86B525C11BADF2EB00CA52B5 /* CoreBluetooth.framework in Frameworks */,
+				BED1655A1BAE2696005DC54B /* Charts.framework in Frameworks */,
 				86B525BF1BADF2E600CA52B5 /* CoreLocation.framework in Frameworks */,
 				F019E8E9A6DF55EB74756303 /* libPods-Elapsed.a in Frameworks */,
 			);
@@ -75,6 +113,7 @@
 		6A8B6B257C3C2B77A6D433C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BED1654C1BAE2539005DC54B /* libios-charts.a */,
 				86B525C01BADF2EB00CA52B5 /* CoreBluetooth.framework */,
 				86B525BE1BADF2E600CA52B5 /* CoreLocation.framework */,
 				99BF37299B506844804441AA /* libPods-Elapsed.a */,
@@ -85,6 +124,7 @@
 		BE1AEB7D1BAD93E20024CD7F = {
 			isa = PBXGroup;
 			children = (
+				BED165541BAE267F005DC54B /* Charts.xcodeproj */,
 				BE2A2D8B1BADA0D8007AC458 /* AutoLayout Convience */,
 				BE1AEB881BAD93E20024CD7F /* Elapsed */,
 				BE1AEB871BAD93E20024CD7F /* Products */,
@@ -147,6 +187,14 @@
 			name = "AutoLayout Convience";
 			sourceTree = "<group>";
 		};
+		BED165551BAE267F005DC54B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BED165591BAE267F005DC54B /* Charts.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D9F536E394A706FCDE37C235 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,10 +217,12 @@
 				BE1AEB841BAD93E20024CD7F /* Resources */,
 				412E5EF1EF9146BD2B7FF1AA /* Embed Pods Frameworks */,
 				4FC9CB3A9AB1EB3859A93098 /* Copy Pods Resources */,
+				BED1655E1BAE2696005DC54B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BED1655D1BAE2696005DC54B /* PBXTargetDependency */,
 			);
 			name = Elapsed;
 			productName = Elapsed;
@@ -210,12 +260,28 @@
 			mainGroup = BE1AEB7D1BAD93E20024CD7F;
 			productRefGroup = BE1AEB871BAD93E20024CD7F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BED165551BAE267F005DC54B /* Products */;
+					ProjectRef = BED165541BAE267F005DC54B /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BE1AEB851BAD93E20024CD7F /* Elapsed */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BED165591BAE267F005DC54B /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = BED165581BAE267F005DC54B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BE1AEB841BAD93E20024CD7F /* Resources */ = {
@@ -297,6 +363,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BED1655D1BAE2696005DC54B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = BED1655C1BAE2696005DC54B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BE1AEB971BAD93E20024CD7F /* LaunchScreen.storyboard */ = {
@@ -397,8 +471,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Elapsed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonscharff.Elapsed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Elapsed/Elapsed-Bridging-Header.h";
@@ -413,8 +492,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Elapsed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonscharff.Elapsed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Elapsed/Elapsed-Bridging-Header.h";
